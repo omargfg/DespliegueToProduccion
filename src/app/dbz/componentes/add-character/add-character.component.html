@@ -1,0 +1,18 @@
+<h4>Agregar Personaje</h4>
+<form class="row" (ngSubmit)="emitCharacter()">
+
+  <input type="text" [(ngModel)]="character.name"  name="Iname"  class="form-control mb-2"  placeholder="Nombre">
+
+  <input type="text" [(ngModel)]="character.power" name="Ipower" class="form-control mb-2" placeholder="Poder">
+
+<!--
+  1-la directiva d angular  [(ngModel)]="" lo que hace es tomar el valor del objeto html y relacionarlo con algun aobjeto definido en angular...
+  en este caso el objeto html <input> identificado como 'name="Iname"',  el [(ngModel)] esta tomando su valor:' [(ngModel)]="character.name"' y
+  lo esta asignando al atributo'name' de la propiedad 'character' de la clase 'AddCharacterComponent '.
+  2-La directiva de angular (ngsubmit) se usa para enviar la informacion de un objeto html, en este caso , un <form/> y
+  se le especifica la funcion que va a enviar en ese evento, en este caso 'emitCharacter()'..(ngSubmit)="emitCharacter()"
+-->
+
+
+<button type="submit"  class="btn btn-primary" >agregar</button>
+</form>
