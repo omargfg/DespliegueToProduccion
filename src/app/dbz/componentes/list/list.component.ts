@@ -21,6 +21,7 @@ public onDeletedId=new EventEmitter<string>();
 onDeleteCharacterByID(id?:string):void{
 
   if (!id) return;//aki ponemos esta validacion para si el ID no existe que nunca lo mande a llamar
+  console.log(id);
   this.onDeletedId.emit(id);
 
 }

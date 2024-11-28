@@ -1,5 +1,6 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { character } from '../../interfaces/character.interface';
+import { v4 as uuid  } from 'uuid';
 
 @Component({
   selector: 'dbz-add-character',
@@ -9,7 +10,7 @@ import { character } from '../../interfaces/character.interface';
 export class AddCharacterComponent  {
 
 //creo un caracter temporal para ponerle los valores de los input y luego agregarlo a mi lista d caracteres
-  public character:character ={ name:'',power:0}
+  public character:character ={id:'', name:'',power:0}
 
 
 
@@ -26,6 +27,7 @@ export class AddCharacterComponent  {
 
   if (this.character.name.length===0||this.character.power===0) return;//valido q los valores no vengan vacios
 
+       this.character.id=uuid();
        this.onNewCharacter.emit(this.character);//si todo esta ok,a la propiedad 'onNewCharacter' q voy a emitir le asigno mi objeto 'character'
 
   this.character={ name:'',power:0};//limpio los input
