@@ -5,13 +5,13 @@
  <!-- aqui llamamos al componente <dbz-list> y luego llamamos la property definida mediante @Input(),
   en este caso 'characterlist'y decimos que 'characters'en este caso es el valor q recibe,
   q era nuestro arreglo creado en'main-page.component.ts'  -->
-<dbz-list [characterlist]="ServdbzService.characters" (onDeletedId)="ServdbzService.deleteCharacterById($event)"></dbz-list>
+<dbz-list [characterlist]="get_characters" (onDeletedId)="onDeleteCharacter($event)"></dbz-list>
 <!-------------------------------------------------->
  <!--<add-character></add-character>-->
     </div>
 
 
 <div class="col">
-  <dbz-add-character (onNewCharacter)="ServdbzService.onNewCaracter($event) "></dbz-add-character>
+  <dbz-add-character (onNewCharacter)="onNewCharacter($event) "></dbz-add-character>
 </div>
   </div>

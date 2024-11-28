@@ -31,12 +31,12 @@ public characters: character[]=[ {//este ajemplo hace la funcion de contener lo 
 
 } ];//fin del arreglo d characters
 
-public onNewCaracter(character:character):void{
+public addCaracter(character:character):void{
 //aki estamos declarando la variable'newCharacter'd tipo'character' y la estamos inicializando d
 //la siguiente manera' id:uuid(),...character' q kiere decir q va a recibir un atributo nuevo, en este caso'id:uuid()'
 //mas todo lo que tenia el tipo d dato character anteriormente q se pone asi'...character'.
 
-const newCharacter:character={  id:uuid(),...character};
+const newCharacter:character={  ...character,id:uuid()};
 
 //esta declaracion d abajo es lo mismo que la linea anterior pero de la manera convencional
 //        const newCharacter2:character={
@@ -45,7 +45,7 @@ const newCharacter:character={  id:uuid(),...character};
 //        power:character.power
 //          }
 
-this.characters.push(character);
+this.characters.push(newCharacter);
 
 }
 

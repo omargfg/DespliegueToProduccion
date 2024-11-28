@@ -27,7 +27,7 @@ export class AddCharacterComponent  {
 
   if (this.character.name.length===0||this.character.power===0) return;//valido q los valores no vengan vacios
 
-       this.character.id=uuid();
+       //this.character.id=uuid();
        this.onNewCharacter.emit(this.character);//si todo esta ok,a la propiedad 'onNewCharacter' q voy a emitir le asigno mi objeto 'character'
 
   this.character={ name:'',power:0};//limpio los input
