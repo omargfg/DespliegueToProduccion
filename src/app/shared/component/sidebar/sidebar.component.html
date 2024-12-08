@@ -1,0 +1,30 @@
+<h2>Paises</h2>
+<hr>
+<ul class="list-group">
+
+<!--
+  1-la sintaxis routerLink="vinculo", es una propiedad de <li> qse utiliza en el onclic seguir un vinculo especificado
+  2-la sintaxis routerLinkActive="active" es una propiedad de <li> que la marca en azul cuando el vinculo a seguir esta activo
+-->
+  <!-- <li routerLink="home"  routerLinkActive="active"  class="list-group-item">
+    HomePage
+  </li>
+  <li routerLink="about" routerLinkActive="active" class="list-group-item">
+   About
+  </li>
+  <li routerLink="contact" routerLinkActive="active" class="list-group-item">
+   Contact
+   </li> -->
+
+   <!--estas paginas la vamos a carar por el leazyload definido 'app-routingModule'-->
+    <li routerLink="countries/by-capital" routerLinkActive="active" class="list-group-item">
+    Por Capital
+      </li>
+    <li routerLink="countries/by-country" routerLinkActive="active" class="list-group-item">
+        Por Pais
+    </li>
+    <li routerLink="countries/by-region" routerLinkActive="active" class="list-group-item">
+      Por Region
+    </li>
+
+</ul>

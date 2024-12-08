@@ -1,0 +1,14 @@
+
+      <!-- la sintaxis [placeholder] ="DinamicPlaceHolder" le estamos diciendo a angular q tome el control de la propiedad
+      'placeholder' mediante[] y le decimos que llame la property 'DinamicPlaceHolder' q esta definita x nosotros en el .ts d
+      este componente comoun decorador:
+      @Input()
+      public DinamicPlaceHolder:string='';
+-->
+
+<input type="text"
+[placeholder] ="DinamicPlaceHolder"
+class="form-control"
+(keyup.enter)="GetIbuscar_Value(I_Buscar.value)"
+#I_Buscar
+>

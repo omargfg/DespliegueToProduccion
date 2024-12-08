@@ -1,0 +1,25 @@
+<h2>Por Paises</h2>
+<hr>
+
+    <div class="row">
+      <div class="col">
+      <!-- en la sintaxis [DinamicPlaceHolder]="'Busqueda por Capital'", estamos haciendo uso de la propiedad dinamica 'placeholder' dentro de
+      <searchbox></searchbox> y le estamos asignando el valor en este caso del string="'Busqueda por Capital'".  -->
+
+    <searchbox (Input_value)="searchCountry($event.valueOf())"
+
+    [DinamicPlaceHolder]="'Busqueda por Pises'"
+
+     ></searchbox>
+      <hr>
+    </div>
+
+    <div class="row">
+        <div class="col">
+          <hr>
+          <countryTable [countries]="lis_countries" ></countryTable>
+
+        </div>
+
+    </div>
+</div>
